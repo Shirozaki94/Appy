@@ -26,5 +26,6 @@ Appy is a simple yet effective voice-command application built using Python and 
 1. **Clone the GitHub repository:**
    ```bash
    git clone https://github.com/Shirozaki94/Appy.git
-## 🤝 Contribution
+   
+## **🤝 Contribution**
 - We welcome any contributions, bug reports, or issues. Please feel free to open an issue or submit a pull request.
