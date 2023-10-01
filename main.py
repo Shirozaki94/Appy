@@ -6,6 +6,7 @@ import os
 import webbrowser
 from datetime import datetime
 
+
 class CommandRecognizer(QThread):
     commandRecognized = pyqtSignal(str)
 
@@ -34,6 +35,7 @@ class CommandRecognizer(QThread):
 
     def stop_recognizing(self):
         self.keep_running = False
+
 
 class Appy(QWidget):
     def __init__(self):
@@ -108,10 +110,9 @@ class Appy(QWidget):
         self.commandOutput.append("Exiting Appy. Goodbye!")
         QApplication.instance().quit()
 
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     demo = Appy()
     demo.show()
     sys.exit(app.exec())
-
-    print("Mata")
