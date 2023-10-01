@@ -16,11 +16,12 @@ class CommandRecognizer(QThread):
 
     def run(self):
         while self.keep_running:
-            command = self.recognize_command()
+            command = CommandRecognizer.recognize_command()  # calling the static method using the class name
             if self.keep_running:  # Check again before emitting the signal
                 self.commandRecognized.emit(command)
 
-    def recognize_command(self):
+    @staticmethod
+    def recognize_command():
         r = sr.Recognizer()
         with sr.Microphone() as source:
             audio = r.listen(source)
