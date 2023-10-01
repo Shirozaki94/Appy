@@ -102,6 +102,8 @@ class Appy(QWidget):
             os.system('calc.exe')
         elif 'open google' in command or 'open chrome' in command:
             os.system('"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"')
+        elif 'exit' in command:
+            self.exit_application()
         else:
             self.commandOutput.append(f"'{command}' is not a recognized command. Try again.")
 
