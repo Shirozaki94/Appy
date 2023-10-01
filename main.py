@@ -113,3 +113,5 @@ if __name__ == '__main__':
     demo = Appy()
     demo.show()
     sys.exit(app.exec())
+
+    print("Mata")
