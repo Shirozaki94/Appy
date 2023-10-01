@@ -24,14 +24,12 @@ class CommandRecognizer(QThread):
         r = sr.Recognizer()
         with sr.Microphone() as source:
             audio = r.listen(source)
-            command = ""
             try:
-                command = r.recognize_google(audio)
+                return r.recognize_google(audio).lower()
             except sr.UnknownValueError:
                 return "Sorry, I didn't catch that. Try again."
             except sr.RequestError:
                 return "API unavailable. Try again later."
-            return command.lower()
 
     def stop_recognizing(self):
         self.keep_running = False
